@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="73f36ef6-ea60-4947-9803-c89822a24ac2">
+	<property name="ireport.zoom" value="1.3310000000000224"/>
+	<property name="ireport.x" value="69"/>
+	<property name="ireport.y" value="64"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     anggota.`kd_anggota` AS anggota_kd_anggota,
+     anggota.`nisn` AS anggota_nisn,
+     anggota.`nama_anggota` AS anggota_nama_anggota,
+     anggota.`tempat_lahir` AS anggota_tempat_lahir,
+     anggota.`tanggal_lahir` AS anggota_tanggal_lahir,
+     anggota.`kelas` AS anggota_kelas,
+     anggota.`nomer_hp` AS anggota_nomer_hp,
+     anggota.`alamat` AS anggota_alamat,
+     anggota.`jml_pinjam` AS anggota_jml_pinjam
+FROM
+     `anggota` anggota]]>
+	</queryString>
+	<field name="anggota_kd_anggota" class="java.lang.String"/>
+	<field name="anggota_nisn" class="java.lang.String"/>
+	<field name="anggota_nama_anggota" class="java.lang.String"/>
+	<field name="anggota_tempat_lahir" class="java.lang.String"/>
+	<field name="anggota_tanggal_lahir" class="java.sql.Date"/>
+	<field name="anggota_kelas" class="java.lang.String"/>
+	<field name="anggota_nomer_hp" class="java.lang.String"/>
+	<field name="anggota_alamat" class="java.lang.String"/>
+	<field name="anggota_jml_pinjam" class="java.lang.Integer"/>
+	<variable name="anggota_nama_anggota_1" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{anggota_nama_anggota}]]></variableExpression>
+	</variable>
+	<variable name="anggota_nama_anggota_2" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{anggota_nama_anggota}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="217" y="71" width="158" height="17"/>
+				<textElement textAlignment="Center">
+					<font size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Terakreditasi "A", Telp.021 97970467]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="886639dc-fd35-49ef-9952-f213ffb30876" x="20" y="20" width="72" height="59"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="105" y="59" width="409" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Jl.Pertanian Rt 015/012 Atsiri Permai, Komplek Deptan Desa Ragajaya Kec.Bojonggede, Kab.Bogor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="99" y="38" width="406" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SMP PELITA ATSIRI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="99" y="21" width="406" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[YAYASAN MUJAHIDIN PEGAWAI PERTANIAN]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="a429bf48-5d81-43f2-8f26-39ebf6ffbb43" x="0" y="101" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="136" y="13" width="328" height="23"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rekap Laporan Anggota Perpustakaan]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="55" splitType="Stretch">
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="555" y="3" width="1" height="50"/>
+			</line>
+			<line>
+				<reportElement uuid="a429bf48-5d81-43f2-8f26-39ebf6ffbb43" x="0" y="3" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="0" y="4" width="1" height="48"/>
+			</line>
+			<line>
+				<reportElement uuid="a429bf48-5d81-43f2-8f26-39ebf6ffbb43" x="0" y="52" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="57" y="4" width="1" height="48"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="13" y="11" width="30" height="20"/>
+				<textElement/>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="8" y="28" width="40" height="20"/>
+				<textElement/>
+				<text><![CDATA[Anggota]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="128" y="4" width="1" height="48"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="74" y="20" width="30" height="28"/>
+				<textElement/>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="160" y="20" width="30" height="28"/>
+				<textElement/>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="221" y="4" width="1" height="48"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="299" y="4" width="1" height="48"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="246" y="20" width="30" height="28"/>
+				<textElement/>
+				<text><![CDATA[TTL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="307" y="20" width="30" height="28"/>
+				<textElement/>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="340" y="4" width="1" height="48"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="419" y="4" width="1" height="48"/>
+			</line>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="363" y="11" width="35" height="18"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Nomer ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="352" y="26" width="56" height="18"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Handphone]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2892dea-276a-4f16-aad7-339839eff3ad" x="472" y="20" width="35" height="18"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="0" y="-2" width="1" height="51"/>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="555" y="-2" width="1" height="51"/>
+			</line>
+			<line>
+				<reportElement uuid="a429bf48-5d81-43f2-8f26-39ebf6ffbb43" x="0" y="48" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="57" y="-2" width="1" height="51"/>
+			</line>
+			<textField>
+				<reportElement uuid="3a768226-9cb5-46b8-af24-280d9aa61c27" x="5" y="6" width="48" height="43"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_kd_anggota}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="89bf98cf-2c5d-47de-a9f9-558a3f275e24" x="60" y="6" width="68" height="41"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_nisn}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="128" y="-3" width="1" height="51"/>
+			</line>
+			<textField>
+				<reportElement uuid="ce05b44d-ce23-4541-a89c-e44c61e654fd" x="135" y="5" width="82" height="41"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_nama_anggota}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="221" y="-3" width="1" height="51"/>
+			</line>
+			<textField>
+				<reportElement uuid="d0a40c88-3dea-4929-a5a4-83a6db0510fe" x="225" y="5" width="73" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_tempat_lahir}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement uuid="378c7768-d9d1-47ca-9499-27f42a21c2fd" x="225" y="19" width="73" height="28"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_tanggal_lahir}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="299" y="-2" width="1" height="51"/>
+			</line>
+			<textField>
+				<reportElement uuid="a7db31a7-a4d6-4e99-8992-775ce2224df4" x="311" y="5" width="29" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_kelas}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="340" y="-2" width="1" height="51"/>
+			</line>
+			<textField>
+				<reportElement uuid="04282165-f488-4690-b409-e130567f3d8e" x="346" y="6" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_nomer_hp}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d1c64db0-a543-44e7-bc96-8a1eaa095e82" x="429" y="5" width="122" height="40"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{anggota_alamat}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement uuid="1f8588c4-88ab-4f2d-9aa3-3ea21f56d190" x="419" y="-3" width="1" height="51"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="4" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="103" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="424" y="30" width="85" height="17"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="401" y="13" width="37" height="17"/>
+				<textElement/>
+				<text><![CDATA[Bogor,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="411" y="83" width="112" height="20"/>
+				<textElement/>
+				<text><![CDATA[( Rini Handayani, S.Pd. )]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="9510de6e-16ee-433b-9a37-49fe73d8c534" x="438" y="10" width="117" height="20"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE dd MMMMM yyyy",new java.util.Locale("id")).format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

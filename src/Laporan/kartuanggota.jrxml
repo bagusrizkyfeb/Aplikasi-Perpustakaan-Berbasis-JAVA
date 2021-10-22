@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="340" pageHeight="207" columnWidth="330" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="3" isIgnorePagination="true" uuid="6c5652b9-3848-4cb6-b1f3-8e450fdb2f95">
+	<property name="ireport.zoom" value="2.143588810000003"/>
+	<property name="ireport.x" value="15"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Anggota_kd_anggota" class="java.lang.String"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[SELECT
+     *,
+     Anggota.`kd_anggota` AS Anggota_kd_anggota,
+     Anggota.`nisn` AS Anggota_nisn,
+     Anggota.`nama_anggota` AS Anggota_nama_anggota,
+     Anggota.`tempat_lahir` AS Anggota_tempat_lahir,
+     Anggota.`tanggal_lahir` AS Anggota_tanggal_lahir,
+     Anggota.`kelas` AS Anggota_kelas,
+     Anggota.`nomer_hp` AS Anggota_nomer_hp,
+     Anggota.`alamat` AS Anggota_alamat
+FROM
+     `Anggota` Anggota
+WHERE
+  Anggota.`kd_anggota` = $P{Anggota_kd_anggota}]]>
+	</queryString>
+	<field name="kd_anggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nisn" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_anggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempat_lahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_lahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomer_hp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jml_pinjam" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Anggota_kd_anggota" class="java.lang.String"/>
+	<field name="Anggota_nisn" class="java.lang.String"/>
+	<field name="Anggota_nama_anggota" class="java.lang.String"/>
+	<field name="Anggota_tempat_lahir" class="java.lang.String"/>
+	<field name="Anggota_tanggal_lahir" class="java.sql.Date"/>
+	<field name="Anggota_kelas" class="java.lang.String"/>
+	<field name="Anggota_nomer_hp" class="java.lang.String"/>
+	<field name="Anggota_alamat" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="b628289d-4f9c-4f27-86f5-87e539bb3885" x="0" y="0" width="330" height="44" forecolor="#FFFFFF" backcolor="#009F50"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="82" y="6" width="187" height="20" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Perpustakaan SMP Pelita Atsiri]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="886639dc-fd35-49ef-9952-f213ffb30876" x="15" y="6" width="42" height="32"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="f4481f55-6a2f-472c-9313-64518beb91cd" x="85" y="21" width="187" height="16" forecolor="#FFFFFF"/>
+				<textElement textAlignment="Center">
+					<font fontName="Tahoma" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jl.Pertanian Rt 015/012 Atsiri Permai, Komplek Deptan Desa Ragajaya  Kec.Bojonggede, Kab.Bogor]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="148" splitType="Stretch">
+			<textField>
+				<reportElement uuid="1c35e86e-9c0b-4edc-b102-cc923e8fe0db" x="99" y="6" width="74" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kd_anggota}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="12" y="6" width="67" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kode Anggota]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="83c17e1f-ab92-4e7d-a9f0-48da80d10e61" x="99" y="19" width="39" height="15"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nisn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="12" y="20" width="27" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NISN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="12" y="34" width="27" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="58663c85-f73c-4d94-b27b-32fad9f23d17" x="99" y="34" width="130" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_anggota}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="12" y="47" width="27" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kelas]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="e309b1ff-7c86-4b73-bac2-414a5dcd5d1a" x="99" y="47" width="39" height="13"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="12" y="61" width="42" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="1ddaed6b-dc08-40d8-9f47-1f814156d033" x="99" y="61" width="128" height="33"/>
+				<textElement>
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="87" y="6" width="10" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="87" y="20" width="10" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="87" y="34" width="10" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="87" y="47" width="10" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="87" y="57" width="10" height="12"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="263" y="97" width="49" height="11"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c997fa0-16f2-481e-838b-27cf094e497a" x="259" y="135" width="71" height="11"/>
+				<textElement>
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rini Handayani, S.Pd]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0d7cbb2-1f5f-4b61-89d5-e5eff5531f62" x="12" y="106" width="42" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Ketentuan  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0d7cbb2-1f5f-4b61-89d5-e5eff5531f62" x="12" y="117" width="215" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[1. Kartu anggota perpustakaan dibawa pada saat berkunjung ke perpustakaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0d7cbb2-1f5f-4b61-89d5-e5eff5531f62" x="12" y="126" width="215" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[2. Apabila kartu hilang segera melapor ke petugas perpustakaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f0d7cbb2-1f5f-4b61-89d5-e5eff5531f62" x="12" y="135" width="215" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[3. Penyalah gunaan kartu anggota perpustakaan akan dikenakan sanksi]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
